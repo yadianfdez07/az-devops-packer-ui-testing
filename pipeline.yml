@@ -8,7 +8,7 @@ stages:
 
   - stage: Pre_Requisites
     jobs:
-      - job: Pre-Requisites
+      - job: Pre_Requisites
         steps:
           - script: new-packerServicePrincipal.ps1
             displayName: 'Install the pre-requisites'
@@ -36,7 +36,7 @@ stages:
   
   - stage: Post_Deployment
     jobs:
-      - job: Post-Deployment
+      - job: Post_Deployment
         steps:
           - script: echo "Post-Deployment steps"
             displayName: 'Post-Deployment steps'
