@@ -5,6 +5,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
+
+  - stage: Pre-Requisites
+    jobs:
+      - job: Pre-Requisites
+        steps:
+          - script: new-packerServicePrincipal.ps1
+            displayName: 'Install the pre-requisites'
+
   - stage: Build
     jobs:
       - job: Build
@@ -25,3 +33,10 @@ stages:
         steps:
           - script: echo "Deploying the application"
             displayName: 'Deploy the application'
+  
+  - stage: Post-Deployment
+    jobs:
+      - job: Post-Deployment
+        steps:
+          - script: echo "Post-Deployment steps"
+            displayName: 'Post-Deployment steps'
