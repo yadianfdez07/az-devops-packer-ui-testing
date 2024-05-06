@@ -6,7 +6,7 @@ pool:
 
 stages:
 
-  - stage: Pre-Requisites
+  - stage: Pre_Requisites
     jobs:
       - job: Pre-Requisites
         steps:
@@ -34,7 +34,7 @@ stages:
           - script: echo "Deploying the application"
             displayName: 'Deploy the application'
   
-  - stage: Post-Deployment
+  - stage: Post_Deployment
     jobs:
       - job: Post-Deployment
         steps:
