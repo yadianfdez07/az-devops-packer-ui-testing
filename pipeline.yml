@@ -10,7 +10,7 @@ stages:
     jobs:
       - job: Pre_Requisites
         steps:
-          - script: new-packerServicePrincipal.ps1
+          - script: ./new-packerServicePrincipal.ps1
             displayName: 'Install the pre-requisites'
 
   - stage: Build
