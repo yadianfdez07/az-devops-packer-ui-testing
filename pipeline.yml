@@ -10,8 +10,11 @@ stages:
     jobs:
       - job: Pre_Requisites
         steps:
-          - script: ./new-packerServicePrincipal.ps1
-            displayName: 'Install the pre-requisites'
+          - task: PowerShell@2
+            inputs:
+              targetType: 'filePath'
+              filePath: './new-packerServicePrincipal.ps1'
+              pwsh: true
 
   - stage: Build
     jobs:
