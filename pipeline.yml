@@ -10,11 +10,13 @@ stages:
     jobs:
       - job: Pre_Requisites
         steps:
-          - task: PowerShell@2
+        
+          - task: AzureCLI@2
             inputs:
-              targetType: 'filePath'
-              filePath: './new-packerServicePrincipal.ps1'
-              pwsh: true
+              azureSubscription: 'DevOpsConnection'
+              scriptType: 'pscore'
+              scriptLocation: 'scriptPath'
+              scriptPath: './new-packerServicePrincipal.ps1'
 
   - stage: Build
     jobs:
