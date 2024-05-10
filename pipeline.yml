@@ -15,7 +15,7 @@ stages:
         steps:
 
           - script: |
-              echo ${{variables.az-subscriotion-id}}
+              echo ${{variables.azSubscriptionId}}
             displayName: 'Echo variables'
 
           - task: AzureCLI@2
