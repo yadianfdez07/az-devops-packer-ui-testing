@@ -1,8 +1,8 @@
 trigger:
  - main
 
- variables:
-  - template: variables.yml
+variables:
+- template: variables.yml
 
 pool:
   vmImage: 'ubuntu-latest'
