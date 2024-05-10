@@ -16,7 +16,6 @@ stages:
 
           - script: |
               echo Variable Value : $(azSubscriptionId)
-              echo Secret Variable Value : $(secretVar)
             displayName: 'Echo variables'
 
           - task: AzureCLI@2
