@@ -15,7 +15,7 @@ stages:
         steps:
 
           - script: |
-              echo $[variables.contososecret]
+              echo $[variables.azSubscriptionId]
             displayName: 'Echo variables'
 
           - task: AzureCLI@2
