@@ -14,7 +14,7 @@ stages:
       - job: Pre_Requisites
         steps:
 
-          - script: echo Variabke Value: ${{variables.azSubscriptionId}}
+          - script: echo Variable Value - ${{variables.azSubscriptionId}}
             displayName: 'Echo variables'
 
           - task: AzureCLI@2
