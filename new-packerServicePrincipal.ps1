@@ -1,8 +1,8 @@
 Write-Output "Create a new service principal for Packer";
-# $sp = az ad sp create-for-rbac --name "PackerServicePrincipal" --role Contributor --scopes /subscriptions/$subscriptionId
 
+#$sp = New-AzADServicePrincipal -DisplayName "PackerPrincipal" -role Contributor -scope "/subscriptions/$Env:AZSUBSCRIPTIONID"
 
-$sp = New-AzADServicePrincipal -DisplayName "PackerPrincipal" -role Contributor -scope "/subscriptions/$Env:AZSUBSCRIPTIONID"
+$sp = az ad sp create-for-rbac --name "PackerServicePrincipal" --role Contributor --scopes "/subscriptions/$Env:AZSUBSCRIPTIONID"
 
 $plainPassword = (New-AzADSpCredential -ObjectId $sp.Id).SecretText
 
