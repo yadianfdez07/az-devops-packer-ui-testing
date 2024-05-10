@@ -1,8 +1,8 @@
-trigger:
- - main
-
 variables:
 - template: variables.yml
+
+trigger:
+ - main
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -14,7 +14,8 @@ stages:
       - job: Pre_Requisites
         steps:
 
-          - script: echo Variable Value - ${{variables.azSubscriptionId}}
+          - script: |
+              echo Variable Value : $(azSubscriptionId)
             displayName: 'Echo variables'
 
           - task: AzureCLI@2
