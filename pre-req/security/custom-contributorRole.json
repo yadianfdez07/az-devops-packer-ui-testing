@@ -1,0 +1,19 @@
+{
+  "Name": "{roleName}",
+  "IsCustom": true,
+  "Description": "Role to manage Azure resources from Azure DevOps pipelines.",
+  "Actions": ["*"],
+  "NotActions": [
+    "Microsoft.Authorization/*/Delete",
+    "Microsoft.Authorization/*/Write",
+    "Microsoft.Authorization/elevateAccess/Action",
+    "Microsoft.Blueprint/blueprintAssignments/write",
+    "Microsoft.Blueprint/blueprintAssignments/delete",
+    "Microsoft.Compute/galleries/share/action",
+    "Microsoft.Purview/consents/write",
+    "Microsoft.Purview/consents/delete"
+  ],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": ["/subscriptions/{subscriptionId}"]
+}
