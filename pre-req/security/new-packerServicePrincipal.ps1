@@ -9,7 +9,6 @@ $plainPassword = (New-AzADSpCredential -ObjectId $sp.Id).SecretText
 Write-Output "Variable Value: $Env:AZSUBSCRIPTIONID";
 Get-ChildItem Env: | Format-Table -AutoSize
 
-$subName = "Personal-PAYG"
 $sub = Get-AzSubscription -SubscriptionName $subName
 
 Write-Output "Subscription Name: $sub";
