@@ -17,8 +17,8 @@ sed -i 's/{roleName}/'$roleName'/g' $rolePath
 
 cat "$rolePath"
 
-#az role definition create --role-definition "$rolePath"
+az role definition create --role-definition "$rolePath"
 
-#az role definition list --custom-role-only true
+# az role definition list --custom-role-only true
 
-#az role definition delete --name "$roleName"
+# az role definition delete --name "$roleName"
